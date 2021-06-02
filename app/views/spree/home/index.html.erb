@@ -1,0 +1,121 @@
+<% @body_id = 'home' %>
+
+<div class="homepage-hero-image mb-3 position-relative">
+  <img class="lazyload hero-image position-absolute"
+    data-src="https://d9rok4vaowhj0.cloudfront.net/assets/homepage/main_banner-30a34858367c682bd975733dcac39ae36eba20e8723637f4e50e7e4a1288da30.jpg"
+    data-srcset="https://d9rok4vaowhj0.cloudfront.net/assets/homepage/main_banner-30a34858367c682bd975733dcac39ae36eba20e8723637f4e50e7e4a1288da30.jpg"
+    alt="Summer Collection">
+
+  <div class="hero-content">
+    <div class="homepage-hero-image-text mb-2 mx-auto pb-3 pb-md-4">
+      Summer Collection
+    </div>
+    <div>
+      <%= link_to 'SHOP NOW', spree.products_path, class: 'btn btn-primary spree-btn px-5' %>
+    </div>
+  </div>
+</div>
+
+<div class="container">
+  <div class="row">
+    <div class="col-6">
+
+      <%= link_to spree.nested_taxons_path('men'), class: "homepage-taxon-box mb-3" do %>
+        <img class="w-100 lazyload"
+          data-src="https://d9rok4vaowhj0.cloudfront.net/assets/homepage/category_banner_upper-bf1d79fc1d5da2ba796d5cdacb2e65a5a89285c6f12d0fd3c4d1a50c635b8f49.jpg"
+          data-srcset="https://d9rok4vaowhj0.cloudfront.net/assets/homepage/category_banner_upper-bf1d79fc1d5da2ba796d5cdacb2e65a5a89285c6f12d0fd3c4d1a50c635b8f49.jpg"
+          alt="Men">
+
+        <div class="homepage-taxon-box-text">
+          <h3>Men</h3>
+        </div>
+      <% end %>
+
+      <%= link_to spree.nested_taxons_path('sportswear'), class: "homepage-taxon-box" do %>
+        <img class="w-100 lazyload"
+          data-src="https://d9rok4vaowhj0.cloudfront.net/assets/homepage/category_banner_lower-b0e4f3ef4fca77de099754d8b23ffd0410c31d127ad228116de7ff54235745dc.jpg"
+          data-srcset="https://d9rok4vaowhj0.cloudfront.net/assets/homepage/category_banner_lower-b0e4f3ef4fca77de099754d8b23ffd0410c31d127ad228116de7ff54235745dc.jpg"
+          alt="Sportswear">
+
+        <div class="homepage-taxon-box-text" role="img" aria-label="Sportswear">
+          <h3>Sportswear</h3>
+        </div>
+      <% end %>
+
+    </div>
+
+    <div class="col-6 d-flex flex-column">
+
+      <%= link_to spree.nested_taxons_path('women'), class: "homepage-taxon-box flex-grow-1" do %>
+        <img class="w-100 lazyload"
+          data-src="<%= asset_path('homepage/big_category_banner.jpg') %>"
+          data-srcset="https://d9rok4vaowhj0.cloudfront.net/assets/homepage/big_category_banner-5308e3f568f948a5d71eb27746b573e0b3559200b1b21bb72dbc6bf69d2ce6de.jpg"
+          alt="Women">
+
+        <div class="homepage-taxon-box-text">
+          <h3>Women</h3>
+        </div>
+      <% end %>
+
+    </div>
+  </div>
+</div>
+
+<div data-product-carousel data-product-carousel-taxon-id='bestsellers' class="my-3"></div>
+
+<div class="homepage-fashion-trends-box mb-3">
+  <div class="text-center">
+    <div class="homepage-fashion-trends-box-summer-text mb-1">Summer 2021</div>
+    <div class="homepage-fashion-trends-box-fashion-trends-text mb-2">FASHION TRENDS</div>
+    <div class="homepage-fashion-trends-box-description-text text-center mb-3">
+      Want to rock this season’s hottest trend in style? These are the top fashion from Summer 2020 Fashion Weeks that are coming our way this season.
+    </div>
+    <%= link_to 'READ MORE', spree.nested_taxons_path('trending'), class: 'btn px-5 spree-btn btn-outline-primary' %>
+  </div>
+</div>
+
+<div data-product-carousel data-product-carousel-taxon-id='trending' class="mb-3"></div>
+
+<div class="container">
+  <div class="row">
+    <div class="col-12 col-lg-6">
+      <%= link_to spree.nested_taxons_path('streetstyle') do %>
+        <div class="homepage-bottom-box text-center mb-3">
+          <img class="w-100 lazyload"
+            data-src="https://d9rok4vaowhj0.cloudfront.net/assets/homepage/promo_banner_left-3a0199e1b27ca0d942cf8778a07db2dbb5c0b8b2ceba9906f786b4f96f359cec.jpg"
+            data-srcset="https://d9rok4vaowhj0.cloudfront.net/assets/homepage/promo_banner_left-3a0199e1b27ca0d942cf8778a07db2dbb5c0b8b2ceba9906f786b4f96f359cec.jpg"
+            alt="NEW COLLECTION">
+
+          <div class="homepage-bottom-box-inner" role="img" aria-label="New Collection">
+            <div class="homepage-bottom-box-inner-small-text">
+              New Collection
+            </div>
+            <div class="homepage-bottom-box-inner-big-text">
+              Streetstyle
+            </div>
+          </div>
+        </div>
+      <% end %>
+    </div>
+
+    <div class="col-12 col-lg-6">
+      <%= link_to spree.nested_taxons_path('summer-sale') do %>
+        <div class="homepage-bottom-box text-center mb-3">
+          <img class="w-100 lazyload"
+            data-src="https://d9rok4vaowhj0.cloudfront.net/assets/homepage/promo_banner_right-be6daa5b7f943c1bb6fe3d419bfebc39a2262a23b72ad25222a3c708bb6f7178.jpg"
+            data-srcset="https://d9rok4vaowhj0.cloudfront.net/assets/homepage/promo_banner_right-be6daa5b7f943c1bb6fe3d419bfebc39a2262a23b72ad25222a3c708bb6f7178.jpg"
+            alt="Summer Sale">
+
+          <div class="homepage-bottom-box-inner">
+            <div class="homepage-bottom-box-inner-small-text">
+              Summer Sale
+            </div>
+            <div class="homepage-bottom-box-inner-big-text">
+              Up To 60%
+            </div>
+          </div>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</div>
